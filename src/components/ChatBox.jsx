@@ -171,7 +171,7 @@ const ChatBox = ({ selectedUser }) => {
                                     onChange={(e) => setMessageText(e.target.value)} // Updates state on change
                                     className="h-full text-[#2A3D39] outline-none text-[16px] pl-3 pr-[50px] rounded-lg w-[100%]"
                                     type="text"
-                                    placeholder="Write your message..."
+                                    placeholder="Digite sua messagem..."
                                 />
 
                                 {/* Send button */}
@@ -187,8 +187,8 @@ const ChatBox = ({ selectedUser }) => {
                 <section className="h-screen w-[100%] bg-[#e5f6f3]">
                     <div className="flex flex-col justify-center items-center h-[100vh]">
                         <img src={logo} width={100} alt="" />
-                        <h1 className="text-[30px] font-bold text-teal-700 mt-5">Welcome to SmoothChat</h1>
-                        <p className="text-gray-500">Connect and chat with friends easily, securely, fast and free.</p>
+                        <h1 className="text-[30px] font-bold text-teal-700 mt-5">Bem vindo ao SmoothChat</h1>
+                        <p className="text-gray-500">Conecte-se e converse com seus rapidamente.</p>
                     </div>
                 </section>
             )}
