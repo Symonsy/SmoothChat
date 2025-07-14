@@ -188,7 +188,7 @@ const ChatBox = ({ selectedUser }) => {
                     <div className="flex flex-col justify-center items-center h-[100vh]">
                         <img src={logo} width={100} alt="" />
                         <h1 className="text-[30px] font-bold text-teal-700 mt-5">Bem vindo ao SmoothChat</h1>
-                        <p className="text-gray-500">Conecte-se e converse com seus rapidamente.</p>
+                        <p className="text-gray-500">Conecte-se e converse com seus amigos rapidamente.</p>
                     </div>
                 </section>
             )}

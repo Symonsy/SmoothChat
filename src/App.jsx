@@ -31,11 +31,11 @@ function App() {
       {user ? (
         <>
           <div className="flex lg:flex-row flex-col items-start w-[100%]">
-            <NavLinks />
+            <NavLinks setSelectedUser={setSelectedUser} />
             <ChatList setSelectedUser={setSelectedUser} />
             <ChatBox selectedUser={selectedUser} />
             <div className="hidden fixed top-[0px] right-[0px] shadow-lg">
-              <ModalChatList />
+              <ModalChatList setSelectedUser={setSelectedUser} />
             </div>
           </div>
         </>

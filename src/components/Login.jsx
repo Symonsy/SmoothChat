@@ -35,7 +35,7 @@ const Login = ({ isLogin, setIsLogin }) => {
         <div className="mb-10">
           <h1 className="text-center text-[28px] font-bold">Login</h1>
           <p className="text-center text-sm text-gray-400">
-            Bem vindo, fça login para continuar.login para continuar
+            Bem vindo, faça login para continuar
           </p>
         </div>
         <div className="w-full">
@@ -63,7 +63,7 @@ const Login = ({ isLogin, setIsLogin }) => {
             onClick={handleAuth}
           >
             {isLoading ? (
-              <>Carregado...</>
+              <>Carregando...</>
             ) : (
               <>
                 Login <FaSignInAlt />

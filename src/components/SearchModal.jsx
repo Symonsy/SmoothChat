@@ -120,7 +120,7 @@ const SearchModal = ({ startChat }) => {
                       className="flex items-start gap-3 bg-[#15eabc34] p-2 rounded-lg cursor-pointer border border-[#ffffff20]"
                       key={user.uid}
                       onClick={() => {
-                        startChat(user);
+                        startChat && startChat(user);
                         console.log(user);
                         closeModal();
                       }}

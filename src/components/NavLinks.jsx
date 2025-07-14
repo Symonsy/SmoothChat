@@ -6,7 +6,7 @@ import { auth } from "../firebase/firebase";
 import logo from "../../public/assets/logo.png";
 import ModalChatList from "./ModalChatList";
 
-const NavLinks = () => {
+const NavLinks = ({ setSelectedUser }) => {
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     const handleModal = (e) => {
@@ -26,7 +26,7 @@ const NavLinks = () => {
     return (
         <section className="sticky lg:static top-0 z-[200] lg:z-[0] flex items-center lg:items-start lg:justify-start bg-[#01AA85] h-[7vh] lg:h-[100vh] w-[100%] lg:w-[150px] py-8 lg:py-0">
             <main className="flex lg:flex-col items-center lg:gap-10 justify-between lg:px-0 w-[100%]">
-                <div className="flex items-start justify-center lg:border-b border-b-1 lg:w-[100%] p-4">
+                <div className="flex items-start justify-center lg:w-[100%] p-4">
                     <span className="flex items-center justify-center bg-[#fff] w-[57px] h-[48px] rounded-lg p-2">
                         <img src={logo} className="w-[56px] h-[52px] object-contain" />
                     </span>
@@ -42,7 +42,11 @@ const NavLinks = () => {
                 <button onClick={handleModal} className="block lg:hidden text-[30px] px-3">
                     <RiArrowDownSFill color="#fff" />
                 </button>
-                {isModalVisible && <ModalChatList />}
+                {isModalVisible && (
+                    <div className="fixed inset-0 z-[999] flex justify-center items-center bg-[#00170cb7]">
+                        <ModalChatList setSelectedUser={setSelectedUser} closeModal={() => setIsModalVisible(false)} />
+                    </div>
+                )}
             </main>
         </section>
     );
